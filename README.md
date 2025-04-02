@@ -17,37 +17,33 @@ This Java application generates reports based on data from CSV files. Its core f
 
 ## 3. Project Structure
 
-java_test_assignment_2025/
-├── input/                      # Directory for input data
-│   ├── casino_gaming_results.csv  # Example input CSV
-│   └── DailyBetWinLossReport.xml  # Example configuration XML
-├── output/                     # Directory for output reports (created automatically if needed)
-├── src/
-│   ├── main/
-│   │   └── java/
-│   │       └── com/playtech/
-│   │           ├── ReportGenerator.java   # Main application class
-│   │           ├── report/                # Classes related to the report (XML model, transformers)
-│   │           │   ├── Report.java
-│   │           │   ├── column/
-│   │           │   │   └── Column.java
-│   │           │   └── transformer/
-│   │           │       ├── Transformer.java  # Transformer interface
-│   │           │       └── impl/             # Transformer implementations
-│   │           │           ├── AggregatorTransformer.java
-│   │           │           ├── DateTimeFormatterTransformer.java
-│   │           │           ├── MathOperationTransformer.java
-│   │           │           ├── OrderingTransformer.java
-│   │           │           └── StringFormatterTransformer.java
-│   │           └── util/                  # Utility classes
-│   │               └── xml/                 # XML related utilities (parser, adapters, helpers)
-│   │                   ├── XmlParser.java
-│   │                   ├── adapters/
-│   │                   ├── helpers/
-│   │                   └── refs/
-│   └── test/                     # Unit tests (if available)
-├── pom.xml                     # Maven configuration file
-└── README.md                   # This documentation file
+The project follows a standard Maven layout. Here's a breakdown of the key directories and their purposes:
+
+java_test_assignment_2025/ (Root Directory):
+
+Contains the core project files and subdirectories.
+pom.xml [cite: uploaded:java_test_assignment_2025/pom.xml]: The Maven Project Object Model file. It defines project dependencies, build configurations, plugins, and metadata.
+README.md [cite: uploaded:java_test_assignment_2025/README.md]: Contains documentation about the project (like the one generated previously).
+src/: Contains the source code and resources.
+
+src/main/java/ [cite: uploaded:java_test_assignment_2025/pom.xml]: Contains the main application source code (.java files).
+com/playtech/: The root package for the project's code.
+ReportGenerator.java [cite: uploaded:java_test_assignment_2025/src/main/java/com/playtech/ReportGenerator.java]: The main executable class that orchestrates the report generation process.
+report/: Package containing classes related to the report model and data transformation.
+Report.java, column/Column.java: JAXB annotated classes representing the structure of the configuration XML.
+transformer/: Contains the Transformer.java interface and the impl/ sub-package with concrete transformer implementations (like AggregatorTransformer, OrderingTransformer, etc.).
+util/: Package containing utility classes.
+xml/: Contains XML processing utilities like XmlParser.java, JAXB adapters (adapters/), and helper classes (helpers/, refs/).
+src/test/java/ [cite: uploaded:java_test_assignment_2025/pom.xml]: Contains the source code for unit and integration tests (.java files). (Note: The uploaded XmlParserTest.java was incorrectly placed in src/main/java [cite: uploaded:java_test_assignment_2025/src/main/java/com/playtech/util/xml/XmlParserTest.java]).
+src/test/resources/ [cite: uploaded:java_test_assignment_2025/pom.xml]: Contains resource files needed for running tests, such as test configurations or sample data (e.g., test_report.xml [cite: uploaded:java_test_assignment_2025/src/test/resources/test_report.xml]).
+input/ [cite: uploaded:java_test_assignment_2025/input/casino_gaming_results.csv, uploaded:java_test_assignment_2025/input/DailyBetWinLossReport.xml]: Contains example input files for the application:
+
+.csv files holding the raw data.
+.xml files holding the report configuration.
+output/: (This directory wasn't explicitly uploaded but is conventional and mentioned in usage examples) Intended location for the generated report files (.jsonl). The application can create this directory if it doesn't exist.
+
+target/: Standard Maven directory where compiled code (.class files), test results, packaged applications (e.g., .jar files), and other build artifacts are placed. This directory is typically generated during the Maven build process and can usually be safely deleted (mvn clean). You provided files from target/test-classes and target/maven-archiver [cite: uploaded:java_test_assignment_2025/target/test-classes/test_report.xml, uploaded:java_test_assignment_2025/target/maven-archiver/pom.properties].
+
 ## 4. Dependencies
 
 The project uses Maven for dependency management. Key dependencies (defined in `pom.xml`):
