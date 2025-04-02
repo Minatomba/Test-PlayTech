@@ -87,7 +87,7 @@ The report generator's behavior is entirely controlled by an XML configuration f
             </parameters>
         </transformer>
         </transformers>
-
+```
 ## 6. Transformers
 Transformers are classes implementing the Transformer interface that perform specific operations on the report data. They are executed sequentially in the order defined in the XML configuration.
 
