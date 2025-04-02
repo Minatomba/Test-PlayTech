@@ -1,0 +1,16 @@
+C:\java_test_assignment_2025\src\main\java\com\playtech\report\transformer\Transformer.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\report\transformer\impl\AggregatorTransformer.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\report\transformer\impl\OrderingTransformer.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\util\xml\helpers\TransformerWrapper.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\util\xml\refs\InputRef.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\report\transformer\impl\DateTimeFormatterTransformer.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\report\column\Column.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\report\transformer\impl\MathOperationTransformer.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\util\xml\XmlParser.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\report\transformer\impl\StringFormatterTransformer.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\ReportGenerator.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\report\Report.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\util\xml\helpers\Parameters.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\util\xml\XmlParserTest.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\util\xml\adapters\ColumnAdapter.java
+C:\java_test_assignment_2025\src\main\java\com\playtech\util\xml\adapters\TransformerAdapter.java
